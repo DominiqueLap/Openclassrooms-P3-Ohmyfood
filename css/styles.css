@@ -29,11 +29,13 @@ body {
 }
 .description__text {
   font-size: 13px;
-  padding: 0 50px;
+  padding: 0 25px;
 }
 .description__button {
   border-radius: 15px;
   padding: 10px;
+  background: #FF79DA;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
