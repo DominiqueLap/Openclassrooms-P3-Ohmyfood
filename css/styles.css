@@ -1,3 +1,39 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
 
+.header {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+.header__localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-top: 2px solid #F2F2F2;
+  background: #F2F2F2;
+  margin-top: 10px;
+  box-shadow: 0px 2px 2px 1px #F2F2F2;
+}
+.header__localisation p {
+  margin-left: 15px;
+}
+
+.description {
+  text-align: center;
+}
+.description__title {
+  padding: 0 50px;
+}
+.description__text {
+  font-size: 13px;
+  padding: 0 50px;
+}
+.description__button {
+  border-radius: 15px;
+  padding: 10px;
+}
 
 /*# sourceMappingURL=styles.css.map */
