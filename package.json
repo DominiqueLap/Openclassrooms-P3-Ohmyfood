@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "ohmyfood_P3_developpeur_web_openclassrooms_08_2022",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/sass/main.scss:src/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominiqueLap/Openclassrooms-P3-Ohmyfood.git"
+  },
+  "author": "Dom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DominiqueLap/Openclassrooms-P3-Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/DominiqueLap/Openclassrooms-P3-Ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
+}

@@ -1,0 +1,12 @@
+@mixin titles-fonts{
+    font-family: "Shrikhand", sans-serif;
+}
+
+@mixin button-bradius{
+    border-radius: 15px;
+    padding: 10px;
+    background: $color-secondary;
+    color: white;
+    
+  
+}
