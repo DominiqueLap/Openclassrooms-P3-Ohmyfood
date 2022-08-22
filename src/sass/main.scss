@@ -63,3 +63,88 @@
     }
 
 }
+
+.fonctionnement{
+    padding: 10px;
+  
+    &__title{
+     
+    }
+  
+    &__list{
+    padding-left: 0px;
+        list-style-type: none;
+        counter-reset: li ;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+     
+       
+     
+     
+
+
+        &__items{
+
+            position: relative;
+            padding: 20px 0;
+            border-radius: 15px;
+            cursor: pointer;;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            border: 1px solid #F2F2F2;
+            background:linear-gradient(#F2F2F2,30%,#FFF);
+            box-shadow: 5px 5px 5px #F2F2F2;
+            
+            &:hover{
+                background: lighten($color-primary, $amount: 35%);
+            }
+            
+           
+            &::before{
+                content: counter(li); color:#FFF;
+                background: $color-primary;
+                counter-increment:  li ;
+                padding: 3px 6px;
+                border-radius: 50%;
+                position: absolute;
+                left: -10px;
+                font-size: 10px;
+                
+
+                
+                
+            }
+         
+         
+
+           &__links{
+                text-decoration: none;
+              
+
+                &:visited{
+                    color: black;
+                }
+            
+              
+
+
+                &__title{
+                     display: inline;
+                     font-size: 14px;
+                         }
+                i{
+                    padding: 0 15px 0 25px;
+                    color: grey;
+                }
+               
+         
+           
+           }
+           
+         
+           
+        }
+    }
+}
