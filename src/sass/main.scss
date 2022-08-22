@@ -1,4 +1,5 @@
-
+@import "./utils/mixins";
+@import"utils/variables";
 @import "./base/box-sizing";
 @import "./base/normalize";
 @import "./base/typographie";
@@ -7,9 +8,51 @@
     text-align: center;
     box-shadow: 0px 2px 3px lighten(grey,30%);
     margin-top: 20px;
+
     &__logo{
         padding-bottom: 10px;
     }
+}
 
+.localisation{
+
+    @include flexColumn;
+    background: #F2F2F2;
+
+    &__place{
+        @include flexRow;
+        background:grey;
+        padding: 20px 0;
+        width: 100%;
+        
+        
+
+        i{
+            padding-right: 10px;
+        }
+
+        address{
+            font-style: normal;
+        }
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    &__text{
+        opacity: 0.5;
+       text-align: center;
+    }
+    &__link{
+        text-decoration: none;
+        padding: 15px;
+        border-radius: 30px;
+        background: linear-gradient($color-secondary,$color-primary,);
+        color: #FFF;
+        cursor: pointer;
+        margin-bottom: 40px;
+    }
 
 }

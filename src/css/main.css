@@ -320,4 +320,43 @@ template {
   padding-bottom: 10px;
 }
 
+.localisation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #F2F2F2;
+}
+.localisation__place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  padding: 20px 0;
+  width: 100%;
+}
+.localisation__place i {
+  padding-right: 10px;
+}
+.localisation__place address {
+  font-style: normal;
+}
+.localisation__title {
+  text-align: center;
+  font-size: 30px;
+}
+.localisation__text {
+  opacity: 0.5;
+  text-align: center;
+}
+.localisation__link {
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #FFF;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
 /*# sourceMappingURL=main.css.map */
