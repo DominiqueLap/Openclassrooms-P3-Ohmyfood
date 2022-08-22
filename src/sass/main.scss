@@ -6,8 +6,10 @@
 
 .header{
     text-align: center;
-    box-shadow: 0px 2px 3px lighten(grey,30%);
+    box-shadow: 0px 5px 5px lighten(grey,35%);
     margin-top: 20px;
+    position: relative;
+    z-index: 1;
 
     &__logo{
         padding-bottom: 10px;
@@ -21,9 +23,10 @@
 
     &__place{
         @include flexRow;
-        background:grey;
-        padding: 20px 0;
+        background:darken(#F2F2F2, 5%);
+        padding: 15px 0;
         width: 100%;
+        margin-bottom: 20px;
         
         
 
@@ -38,12 +41,15 @@
 
     &__title{
         text-align: center;
-        font-size: 30px;
+   
+        padding: 0 30px;
+      
     }
 
     &__text{
         opacity: 0.5;
        text-align: center;
+       margin: 0 0 16px 0;
     }
     &__link{
         text-decoration: none;
@@ -52,7 +58,8 @@
         background: linear-gradient($color-secondary,$color-primary,);
         color: #FFF;
         cursor: pointer;
-        margin-bottom: 40px;
+        margin:15px 0 60px 0;
+        box-shadow: 0px 5px 5px lighten(grey,35%);
     }
 
 }
