@@ -1,3 +1,15 @@
-*{
-    box-sizing: border-box;
+
+@import "./base/box-sizing";
+@import "./base/normalize";
+@import "./base/typographie";
+
+.header{
+    text-align: center;
+    box-shadow: 0px 2px 3px lighten(grey,30%);
+    margin-top: 20px;
+    &__logo{
+        padding-bottom: 10px;
+    }
+
+
 }
