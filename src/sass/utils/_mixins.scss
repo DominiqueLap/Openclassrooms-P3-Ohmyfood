@@ -24,3 +24,8 @@
     align-items: center;
     
 }
+
+@mixin boxShadow {
+    box-shadow: 5px 5px 5px #F2F2F2;
+    
+}
