@@ -9,14 +9,50 @@ h1,h2
     font-weight: bolder
 };
 
-a{
-    text-decoration: none;
 
+.localisation__place{
+    & address{
+
+    
+        font-style: normal}
 }
 
-// a refactoriser si besoin dans le bon partiel //
- 
-// a:visited{
-//     color:black;
-//     cursor: pointer;
-// }
+
+.fonctionnement{
+    &__list{
+        &__items{
+
+            &__links{
+
+                &__title{
+                    font-size: 14px;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}
+
+.restaurants{
+
+    &__main{
+
+        &__article{
+
+            &__subtitles{
+
+                &__link{
+                    &__title{
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                    &__place{
+                        font-weight: lighter;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

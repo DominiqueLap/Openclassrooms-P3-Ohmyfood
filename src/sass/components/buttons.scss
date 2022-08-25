@@ -1,0 +1,27 @@
+a{
+    text-decoration: none;
+
+}
+
+// a refactoriser si besoin dans le bon partiel //
+ 
+// a:visited{
+//     color:black;
+//     cursor: pointer;
+// }
+
+
+.localisation__link{
+
+    padding: 15px;
+    border-radius: 30px;
+    background: linear-gradient($color-secondary,$color-primary,);
+    color: $btn-color;
+ 
+    margin:15px 0 60px 0;
+    @include boxShadow(lighten(grey,35%));
+
+    &:hover{
+        @include boxShadow(lighten(grey,25%))
+    }
+}
