@@ -431,6 +431,9 @@ a {
 
 .restaurants {
   padding: 10px;
+  background: #F2F2F2;
+  margin-top: 20px;
+  padding-bottom: 40px;
 }
 .restaurants__main {
   display: flex;
@@ -440,7 +443,7 @@ a {
 .restaurants__main__article {
   position: relative;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px #F2F2F2;
+  box-shadow: 5px 5px 5px #bfbfbf;
 }
 .restaurants__main__article__img {
   width: 100%;
@@ -474,6 +477,9 @@ a {
   background: none;
   cursor: pointer;
 }
+.restaurants__main__article__subtitles__like:hover {
+  background-color: yellow;
+}
 .restaurants__main__article__subtitles__like i {
   font-size: 25px;
   border: 1px;
@@ -487,6 +493,35 @@ a {
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 3px;
+}
+
+.footer {
+  color: #FFF;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #343434;
+}
+.footer__title {
+  font-family: "Shrikhand", sans-serif;
+}
+.footer__link {
+  color: #FFF;
+}
+.footer__link__mail {
+  color: #FFF;
+}
+.footer__link__mail:visited {
+  color: black;
+}
+.footer__link p {
+  display: inline;
+  padding-left: 5px;
+}
+.footer__link i {
+  font-size: 16px;
+  width: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
