@@ -67,9 +67,7 @@
 .fonctionnement{
     padding: 10px;
   
-    &__title{
-     
-    }
+   
   
     &__list{
     padding-left: 0px;
@@ -145,6 +143,79 @@
            
          
            
+        }
+    }
+}
+
+.restaurants{
+    padding: 10px;
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+     
+       
+        &__article{
+            position: relative;
+            border-radius:15px;
+            box-shadow: 5px 5px 5px #F2F2F2;
+
+            &__img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+
+            &__subtitles{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 10px ;
+
+                &__link{
+                    text-decoration: none;
+                    color: black;
+                    &:visited{
+                        color: black;
+                    }
+                    
+
+                    &__title{
+                        margin: 0;
+                    }
+                    &__place{
+                        font-weight: lighter;
+                        margin: 0;
+                        margin-top:5px ;
+                        
+                    }
+                }
+
+                &__like{
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+
+                    i{
+                        font-size: 25px;
+                      border: 1px 
+                    }
+
+                }
+            }
+
+            &__flag{
+                position: absolute;
+                top:15px;
+                right: 12px;
+                background: $color-tertiary ;
+                color: darken($color-tertiary, 45%);
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+            }
         }
     }
 }
