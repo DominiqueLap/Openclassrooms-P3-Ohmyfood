@@ -606,7 +606,7 @@ a:visited {
 .menu__main__entrees__title::before {
   content: "";
   position: absolute;
-  width: 10%;
+  width: 35px;
   height: 1px;
   top: 50px;
   left: 11px;
