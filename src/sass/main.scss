@@ -175,18 +175,13 @@
                     border: none;
                     background: none;
                     cursor: pointer;
-                 
-                   
 
-                    &:active{
-                        background-color: yellow;
-                       
-                    }
 
                     i{
                         font-size: 25px;
                       border: 1px;
                       
+
                     
 
                       
@@ -213,11 +208,6 @@
 
 
 
-
-a:visited{
-    color: black;
-
-}
 
 .header-menu{
     @include flexRow;
@@ -255,7 +245,7 @@ a:visited{
 
     &__main{
         &__entrees{
-            margin-top: 20px;
+  
             padding: $pad-section;
             display: flex;
             flex-direction: column;

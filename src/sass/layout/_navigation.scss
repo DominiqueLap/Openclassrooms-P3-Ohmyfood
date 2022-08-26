@@ -1,0 +1,12 @@
+.header-menu{
+    
+        &__nav{
+            font-size: 25px;
+    
+            &__link{
+                &:visited{
+                    color: black
+                }
+            }
+        }
+    }

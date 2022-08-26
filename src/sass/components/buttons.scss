@@ -25,3 +25,27 @@ a{
         @include boxShadow(lighten(grey,25%))
     }
 }
+
+.menu{
+    &__main{
+        &__button
+        {text-align: center;
+            &__btn{
+            padding: 15px 45px;
+    border-radius: 30px;
+    background: linear-gradient($color-secondary,$color-primary,);
+    color: $btn-color;
+ 
+  margin-top: 30px;
+  margin-bottom: 60px;
+    @include boxShadow(lighten(grey,35%));
+    border: none;
+    cursor: pointer;
+        }
+
+        &:hover{
+            @include boxShadow(lighten(grey,25%))
+        }
+    }
+}
+}

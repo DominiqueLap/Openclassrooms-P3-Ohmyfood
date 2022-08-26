@@ -61,6 +61,18 @@ h1,h2
 
 // RESTAURANTS //
 
+.header-menu{
+    &__nav{
+        &__link{
+            i{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+
 .menu{
     &__heading{
         &__title{
