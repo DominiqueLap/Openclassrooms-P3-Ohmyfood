@@ -320,8 +320,56 @@ h1, h2 {
   font-weight: bolder;
 }
 
+.localisation__place address {
+  font-style: normal;
+}
+
+.fonctionnement__list__items__links__title {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.restaurants__main__article__subtitles__link__title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.restaurants__main__article__subtitles__link__place {
+  font-weight: lighter;
+}
+
+.menu__heading__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 30px;
+}
+.menu__heading i {
+  font-size: 25px;
+}
+.menu__main__entrees__title {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.menu__main__entrees__article__titles h3 {
+  font-size: 15px;
+}
+.menu__main__entrees__article__titles h4 {
+  font-weight: 100;
+  font-size: 14px;
+}
+
 a {
   text-decoration: none;
+}
+
+.localisation__link {
+  padding: 15px;
+  border-radius: 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: #FFF;
+  margin: 15px 0 60px 0;
+  box-shadow: 5px 5px 5px #d9d9d9;
+}
+.localisation__link:hover {
+  box-shadow: 5px 5px 5px silver;
 }
 
 .header {
@@ -329,10 +377,41 @@ a {
   box-shadow: 0px 5px 5px #d9d9d9;
   margin-top: 20px;
   position: relative;
-  z-index: 1;
 }
 .header__logo {
   padding-bottom: 10px;
+}
+
+.footer {
+  color: #FFF;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #343434;
+}
+.footer__title {
+  font-family: "Shrikhand", sans-serif;
+}
+.footer__link {
+  color: #FFF;
+}
+.footer__link:visited {
+  color: #FFF;
+}
+.footer__link__mail {
+  color: #FFF;
+}
+.footer__link__mail:visited {
+  color: #FFF;
+}
+.footer__link p {
+  display: inline;
+  padding-left: 5px;
+}
+.footer__link i {
+  font-size: 16px;
+  width: 20px;
 }
 
 .localisation {
@@ -354,9 +433,6 @@ a {
 .localisation__place i {
   padding-right: 10px;
 }
-.localisation__place address {
-  font-style: normal;
-}
 .localisation__title {
   text-align: center;
   padding: 0 30px;
@@ -365,16 +441,6 @@ a {
   opacity: 0.5;
   text-align: center;
   margin: 0 0 16px 0;
-}
-.localisation__link {
-  text-decoration: none;
-  padding: 15px;
-  border-radius: 30px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: #FFF;
-  cursor: pointer;
-  margin: 15px 0 60px 0;
-  box-shadow: 0px 5px 5px #d9d9d9;
 }
 
 .fonctionnement {
@@ -392,7 +458,6 @@ a {
   position: relative;
   padding: 20px 0;
   border-radius: 15px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   margin-left: 10px;
@@ -422,7 +487,6 @@ a {
 }
 .fonctionnement__list__items__links__title {
   display: inline;
-  font-size: 14px;
 }
 .fonctionnement__list__items__links i {
   padding: 0 15px 0 25px;
@@ -443,7 +507,7 @@ a {
 .restaurants__main__article {
   position: relative;
   border-radius: 15px;
-  box-shadow: 5px 5px 5px #bfbfbf;
+  box-shadow: 5px 5px 5px #d9d9d9;
 }
 .restaurants__main__article__img {
   width: 100%;
@@ -458,7 +522,6 @@ a {
   padding: 15px 10px;
 }
 .restaurants__main__article__subtitles__link {
-  text-decoration: none;
   color: black;
 }
 .restaurants__main__article__subtitles__link:visited {
@@ -477,7 +540,7 @@ a {
   background: none;
   cursor: pointer;
 }
-.restaurants__main__article__subtitles__like:hover {
+.restaurants__main__article__subtitles__like:active {
   background-color: yellow;
 }
 .restaurants__main__article__subtitles__like i {
@@ -495,33 +558,79 @@ a {
   border-radius: 3px;
 }
 
-.footer {
-  color: #FFF;
-  padding: 20px 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: #343434;
-}
-.footer__title {
-  font-family: "Shrikhand", sans-serif;
-}
-.footer__link {
-  color: #FFF;
-}
-.footer__link__mail {
-  color: #FFF;
-}
-.footer__link__mail:visited {
+a:visited {
   color: black;
 }
-.footer__link p {
-  display: inline;
-  padding-left: 5px;
+
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
-.footer__link i {
-  font-size: 16px;
-  width: 20px;
+.header-menu__logo {
+  padding-left: 25px;
+}
+
+.menu {
+  background: #F2F2F2;
+}
+.menu__img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.menu__heading {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  border: 1px solid #F2F2F2;
+  background: #F2F2F2;
+  position: absolute;
+  top: 255px;
+}
+.menu__main__entrees {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.menu__main__entrees__title {
+  margin-bottom: 0;
+}
+.menu__main__entrees__title::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 1px;
+  top: 50px;
+  left: 11px;
+  border-bottom: 2px solid #99E2D0;
+}
+.menu__main__entrees__article {
+  background: #FFF;
+  border-radius: 15px;
+  padding: 15px;
+}
+.menu__main__entrees__article a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__main__entrees__article strong {
+  margin-top: auto;
+}
+.menu__main__entrees__article__titles h3 {
+  margin: 0;
+}
+.menu__main__entrees__article__titles h4 {
+  margin: 0;
+  margin-top: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

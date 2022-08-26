@@ -56,3 +56,41 @@ h1,h2
         }
     }
 }
+
+
+
+// RESTAURANTS //
+
+.menu{
+    &__heading{
+        &__title{
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 30px;
+        }
+        i{
+            font-size: 25px;
+        }
+    }
+
+    &__main{
+        &__entrees{
+            &__title{
+                font-size: 20px;
+                font-weight: lighter;
+            }
+            &__article{
+                &__titles{
+                    h3{
+                        font-size: 15px;
+                    }
+
+                    h4{
+                        font-weight: 100;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+

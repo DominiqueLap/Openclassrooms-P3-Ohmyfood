@@ -16,6 +16,10 @@
 
         color: #FFF;
 
+        &:visited{
+            color: #FFF;
+        }
+
       
 
         &__mail{
@@ -23,7 +27,7 @@
             color: #FFF;
 
             &:visited{
-                color: black;
+                color: #FFF;
             }
         }
         
