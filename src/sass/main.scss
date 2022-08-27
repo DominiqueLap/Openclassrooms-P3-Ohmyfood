@@ -6,6 +6,7 @@
 @import"components/buttons.scss";
 @import "layout/header.scss";
 @import "layout/footer.scss";
+@import"layout/navigation.scss";
 
 
 
@@ -47,6 +48,12 @@
 
 .fonctionnement{
     padding: $pad-section;
+
+    @media screen and (min-width:768px) {
+    &__title{
+        text-align: center;
+    }
+}
   
    
   
@@ -57,6 +64,9 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @media screen and (min-width:768px) {
+            @include flexRow;}
      
        
      
@@ -107,6 +117,10 @@
 
                 &__title{
                      display: inline;
+                     @media screen and (min-width:768px) {
+                        padding-right: 18px;
+                        
+                     }
                          }
                 i{
                     padding: 0 15px 0 25px;
@@ -129,16 +143,52 @@
     margin-top: 20px;   
     padding-bottom: 40px;
 
+    &__title{
+        @media screen and (min-width:768px) {
+            text-align: center;
+        }
+    }
+
     &__main{
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media screen and (min-width:768px) {
+            @include flexRow;
+           flex-wrap: wrap;
+            
+        }
+
+        @media screen and (min-width:1024px) {
+
+            @include flexRow;
+ 
+            flex-basis: 40%;
+            
+        }
      
        
         &__article{
             position: relative;
             border-radius:15px;
            @include boxShadow(darken($bg-color,10%));
+           @media screen and (min-width:768px) 
+           {
+           height: 280px;
+           width: 300px;
+           &:hover{
+            transform: scale(1.05);
+            transition: transform 450ms;
+           }    
+            }
+            // @media screen and (min-width:1280px) {
+            //     height: 280px;
+            //     width: 465px;
+            // }
+
+
+
+           
 
             &__img{
                 width: 100%;
@@ -162,6 +212,7 @@
 
                     &__title{
                         margin: 0;
+                   
                     }
                     &__place{
                         font-weight: lighter;
@@ -176,10 +227,19 @@
                     background: none;
                     cursor: pointer;
 
+                    & :hover{
+                      font-weight: bold;
+                      color: red;
+                      transition: color 1s;
+                     }
+
+                   
+
 
                     i{
                         font-size: 25px;
                       border: 1px;
+                      
                       
 
                     

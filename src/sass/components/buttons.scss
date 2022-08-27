@@ -3,13 +3,9 @@ a{
 
 }
 
-// a refactoriser si besoin dans le bon partiel //
- 
-// a:visited{
-//     color:black;
-//     cursor: pointer;
-// }
-
+a{
+    color: black;
+}
 
 .localisation__link{
 
@@ -27,6 +23,15 @@ a{
 }
 
 .menu{
+
+    &__heading{
+        &__button{
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+    }
     &__main{
         &__button
         {text-align: center;
@@ -41,11 +46,12 @@ a{
     @include boxShadow(lighten(grey,35%));
     border: none;
     cursor: pointer;
+    &:hover{
+        @include boxShadow(lighten(grey,25%))
+    }
         }
 
-        &:hover{
-            @include boxShadow(lighten(grey,25%))
-        }
+       
     }
 }
 }
