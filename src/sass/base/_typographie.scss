@@ -1,9 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;}
 
-// font-family: 'Shrikhand', cursive;
-// }
-
 h1,h2
 {font-size: 23px;
     font-weight: bolder
@@ -59,7 +56,7 @@ h1,h2
 
 
 
-// RESTAURANTS //
+// MENUS RESTAURANTS //
 
 .header-menu{
     &__nav{
@@ -74,17 +71,20 @@ h1,h2
 
 
 .menu{
-    &__heading{
-        &__title{
-            font-family: 'Shrikhand', sans-serif;
-            font-size: 30px;
-        }
-        i{
-            font-size: 25px;
-        }
-    }
+
+   
 
     &__main{
+        &__heading{
+            &__title{
+                font-family: 'Shrikhand', sans-serif;
+                font-size: 30px;
+            }
+            i{
+                font-size: 25px;
+            }
+        }
+
         &__entrees{
             &__title{
                 font-size: 20px;
