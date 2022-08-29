@@ -11,19 +11,28 @@
         @include flexColumn;
     }
 
-    @media screen and (min-width:1024px) {
-
-        @include flexRow;
-        gap: 30px;
-        
-    }
+   
 
 
     &__title{
         font-family: 'Shrikhand',sans-serif;
     }
+    &__list{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @media screen and (min-width:768px) {
 
-    &__link {
+            @include flexRow;
+            gap: 30px;
+            
+        }
+
+        &__items{
+
+        
+
+            &__link {
 
         color: #FFF;
 
@@ -64,8 +73,10 @@
             margin-left: 64px;
         }
 
-        .fa-handshake-angle{
-            margin-left: 32px;
-        }
+        // .fa-handshake-angle{
+        //     margin-left: 32px;
+        // }
     }
+    }
+}
 }
