@@ -35,10 +35,13 @@ h1,h2
     &__main{
 
         &__article{
+    
+            &__link{
 
-            &__subtitles{
+                &__container{
 
-                &__link{
+                    &__subtitles{
+
                     &__title{
                     font-size: 16px;
                     font-weight: bold;
@@ -47,12 +50,14 @@ h1,h2
                         font-weight: lighter;
                     }
                 }
+            }
+        }
 
 
             }
         }
     }
-}
+
 
 
 
