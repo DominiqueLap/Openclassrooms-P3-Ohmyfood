@@ -43,6 +43,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+           
    
            
     
@@ -50,7 +51,30 @@
                 justify-content:space-evenly;
             }
     
-         
+            &__button{
+                padding: 0;
+                position: relative;
+
+                @media screen and (min-width:1024px){
+                    &:hover::after{
+                        @include afterButtonEffect(center)
+                        
+                    }
+                }
+
+                &:active::after{
+                    @include afterButtonEffect(center)
+                    
+                }
+
+                &::after{
+                    @include afterButton;
+                    left: 0;
+                    right: 0;
+                    top: -1px;
+                    bottom: 0;
+                }
+            }
         }
 
 

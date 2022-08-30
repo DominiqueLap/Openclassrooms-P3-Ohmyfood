@@ -16,9 +16,13 @@ a{
  
     margin:15px 0 60px 0;
     @include boxShadow(lighten(grey,35%));
+    
+    
 
     &:hover{
-        @include boxShadow(lighten(grey,25%))
+        @include boxShadow(darken(grey,25%));
+     background: linear-gradient( lighten($color-secondary, 5), lighten($color-primary, 5))
+      
     }
 }
 
@@ -31,7 +35,7 @@ a{
             &__button{
                 border: none;
                 background: none;
-                cursor: pointer;
+          
             }
     
         }
@@ -46,10 +50,12 @@ a{
   margin-top: 30px;
   margin-bottom: 60px;
     @include boxShadow(lighten(grey,35%));
+ 
     border: none;
     cursor: pointer;
     &:hover{
-        @include boxShadow(lighten(grey,25%))
+        @include boxShadow(darken(grey,25%));
+        background: linear-gradient( lighten($color-secondary, 5), lighten($color-primary, 5))
     }
         }
 

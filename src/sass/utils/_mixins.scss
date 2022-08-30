@@ -6,9 +6,7 @@
     border-radius: 15px;
     padding: 10px;
     background: $color-secondary;
-    color: white;
-    
-  
+    color: white;  
 }
 
 @mixin flexRow{
@@ -27,7 +25,32 @@
 }
 
 @mixin boxShadow ($colour:$bg-color){
-    box-shadow: 5px 5px 5px $colour;
+    box-shadow: 5px 5px 5px $colour
     
+}
+
+@mixin afterButton{
+
+    content: "\f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    font-size: 25px;
+    position: absolute;
+   
+    opacity: 0;
+    transform: scale(0);
+
+
+}
+
+@mixin afterButtonEffect($trans-origin:$t-origin){
+    opacity: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient($color-primary,$color-secondary);
+    transform-origin: $trans-origin;
+    transform: scaleY(1);
+    transition: transform 1s ease-in-out;
 }
 

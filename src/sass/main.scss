@@ -235,15 +235,33 @@
                     border: none;
                     background: none;
                     cursor: pointer;
+                    position: relative;
+                    padding: 0;
 
-                    & :hover{
-                      font-weight: bold;
-                      color: red;
-                      transition: color 1s;
-                     }
+                    @media screen and (min-width:1024px){
+                        &:hover::after{
+                            @include afterButtonEffect(center)
+                            
+                        }
+                    }
+                 
+                  
 
+                    &:active::after{
+                    
+                        @include afterButtonEffect;
+                     
+                    }
+
+
+                    
                    
+                    &::after{
+                    @include afterButton;
+                    top: -1.5px;
+                    left: 0;
 
+                    }
 
                     i{
                         font-size: 25px;
