@@ -35,11 +35,13 @@ a{
             &__button{
                 border: none;
                 background: none;
+                transition: background 1s;
+                
           
             }
     
         }
-        &__button
+    &__button
         {text-align: center;
             &__btn{
             padding: 15px 45px;
@@ -53,9 +55,12 @@ a{
  
     border: none;
     cursor: pointer;
+    transition: all 0.5s;
+   
     &:hover{
         @include boxShadow(darken(grey,25%));
-        background: linear-gradient( lighten($color-secondary, 5), lighten($color-primary, 5))
+        background: linear-gradient( lighten($color-secondary, 5), lighten($color-primary, 5));
+       
     }
         }
 

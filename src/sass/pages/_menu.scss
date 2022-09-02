@@ -113,9 +113,12 @@
             &__article{
                 background: #FFF;
                 border-radius: 15px;
-                padding: 15px;
+                // padding: 15px;
+                height: 70px;
                 @include boxShadow (darken($bg-color,15%));
                 position: relative;
+                overflow: hidden;
+                
 
                 @media screen and (min-width:768px) {
                     width:75%;
@@ -123,10 +126,14 @@
              
                 
                 &:hover{
+                   
 
-                    @include boxShadow (darken($bg-color,25%))
+                    @include boxShadow (darken($bg-color,25%));
 
+                
                 }
+
+               
                 &:active::after{
                     width: 20%;
                     z-index: 1;
@@ -136,30 +143,30 @@
                  
                 }
 
-                &::after{
+                // &::after{
 
-                    content: "\f058";
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
-                    color: #FFF;
-                    font-size: 25px;
-                    position: absolute;
-                    top: 0  ;
-                    right: 0;
-                    background: $color-tertiary;
-                    height: 100%;
-                    border-bottom-right-radius: 15px;
-                    border-top-right-radius: 15px;
-                    transform: scaleX(0);
-                    transition: transform 500ms ease-in-out;
-                    animation-fill-mode: forwards;
-                    @include flexRow;
+                //     content: "\f058";
+                //     font-family: "Font Awesome 6 Free";
+                //     font-weight: 900;
+                //     color: #FFF;
+                //     font-size: 25px;
+                //     position: absolute;
+                //     top: 0  ;
+                //     right: 0;
+                //     background: $color-tertiary;
+                //     height: 100%;
+                //     border-bottom-right-radius: 15px;
+                //     border-top-right-radius: 15px;
+                //     transform: scaleX(0);
+                //     transition: transform 500ms ease-in-out;
+                //     animation-fill-mode: forwards;
+                //     @include flexRow;
                     
                
                     
 
                  
-                }
+                //}
           
                
 
@@ -167,26 +174,87 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    height: 100%;
+    
                    
                 }
 
-                strong{
-                    margin-top: auto;
-                }
+                // strong{
+                //     margin-top: auto;
+                // }
 
 
                 &__titles{
+                     padding: 15px;
+                     white-space: nowrap;
+                    @extend %ellipsis;
 
                     h3{
                         margin: 0;
+                        @extend %ellipsis;
                     }
 
                     h4{
                         margin:0;
                         margin-top: 5px;
+                       @extend %ellipsis;
+                    }
+
+                }
+
+                &__checkbox{
+                    margin-right: -70px;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    transition: margin-right 1s;
+
+                    strong{
+                        padding: 15px 25px;
+                        margin-top: auto;
+                      
+                    }
+
+                    &__icon{
+                        width: 70px;
+                        height: 100%;
+                        background: $color-tertiary;
+                        border-radius: 0 15px 15px 0;
+                   
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+       
+
+                        .fa-circle-check{
+                            font-size: 25px;
+                            color: #FFF;
+                            // transition: transform 1s;
+                        }
+
+
                     }
                 }
             }
+
         }
     }
+ }
+
+
+// A FACTORISER
+
+ .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox{
+ margin-right: 0;
+
+   
+   
+   
+  // A FACTORISER
+ }
+
+ .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox__icon .fa-circle-check {
+    transform: rotate(360deg);
+    transition-duration: 1s;
+
  }
