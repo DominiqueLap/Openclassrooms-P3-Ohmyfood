@@ -7,6 +7,16 @@
     @include flexRow;
     margin: 20px 0;
 
+    &__nav{
+        &__link{
+            i{
+                position: absolute;
+                left: 35px;
+            top: 25px;
+            }
+        }
+    }
+
     &__logo{
         padding-left: 25px;
     }
@@ -43,6 +53,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+       
            
    
            
@@ -54,7 +65,8 @@
             &__button{
                 padding: 0;
                 position: relative;
-
+               
+            
                 @media screen and (min-width:1024px){
                     &:hover::after{
                         @include afterButtonEffect(center)
@@ -63,7 +75,8 @@
                 }
 
                 &:active::after{
-                    @include afterButtonEffect(center)
+                    @include afterButtonEffect(center);
+                
                     
                 }
 
@@ -73,6 +86,7 @@
                     right: 0;
                     top: -1px;
                     bottom: 0;
+                  
                 }
             }
         }
@@ -244,17 +258,29 @@
 
 // A FACTORISER
 
- .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox{
+ .menu__main__entrees__article:active .menu__main__entrees__article__checkbox{
  margin-right: 0;
-
    
-   
-   
-  // A FACTORISER
  }
 
- .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox__icon .fa-circle-check {
+@media screen and (min-width:1024px) {
+
+    .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox{
+        margin-right: 0;
+          
+        }
+    
+}
+
+ .menu__main__entrees__article:active .menu__main__entrees__article__checkbox__icon .fa-circle-check {
     transform: rotate(360deg);
     transition-duration: 1s;
+
+ }
+
+ @media screen and (min-width:1024px) {
+    .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox__icon .fa-circle-check {
+        transform: rotate(360deg);
+        transition-duration: 1s;}
 
  }
