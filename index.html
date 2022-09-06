@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9dbfc8ab1e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/css/prefixed.css">
+
+    <title>ohmyfood</title>
+</head>
+<body>
+    <div class=loader>
+        <div class="ring">
+          </div>
+        <span>Chargement...</span>
+      </div>
+    <header class="header">
+        <img src="/src/assets/images/logo/ohmyfood@2x.svg" alt="ohmyfood" class="header__logo">
+    </header>
+    <section class="localisation">
+        <div class="localisation__place">
+            <i class="fa-solid fa-location-dot"></i>
+            <address>
+                Paris, Belleville
+            </address>
+        </div>
+        <h1 class="localisation__title">Réservez le menu qui <br> vous convient</h1>
+        <p class="localisation__text">Découvrez des restaurants d'exception, <br> séléctionnés par nos soins</p>
+        <a href="#liste-restau" class="localisation__link">Explorer nos restaurants</a>
+    </section>
+    <section class="fonctionnement">
+        <h2 class="fonctionnement__title">Fonctionnement</h2>
+        <ol class="fonctionnement__list">
+            <li class="fonctionnement__list__items">
+                <a href="#" class="fonctionnement__list__items__links">
+                    <i class="fa-solid fa-mobile-screen-button"></i> 
+                    <h3 class="fonctionnement__list__items__links__title">Choisissez un restaurant</h3>
+                </a>
+            </li>
+
+            <li class="fonctionnement__list__items">
+                <a href="#" class="fonctionnement__list__items__links">
+                    <i class="fa-solid fa-list"></i>
+                    <h3 class="fonctionnement__list__items__links__title">Composez votre menu</h3>
+                </a>
+            </li>
+
+            <li class="fonctionnement__list__items">
+                <a href="#" class="fonctionnement__list__items__links">
+                    <i class="fa-solid fa-store"></i>
+                    <h3 class="fonctionnement__list__items__links__title">Dégustez au restaurant</h3>
+                </a>
+            </li>
+            
+        </ol>
+    </section>
+    <section class="restaurants" id="liste-restau">
+        <h2 class="restaurants__title">Restaurants</h2>
+        <div class="restaurants__main">
+            <article class="restaurants__main__article">
+                <a href="/src/la_palette_du_gout.html" class="restaurants__main__article__link">
+                    <img src="/src/assets/images/restaurants/la_palette_du_gout.jpg" alt="La palette du gôut" class="restaurants__main__article__link__img">
+                </a>
+                    <div class="restaurants__main__article__link__container">
+                        <!--Obligé de remettre lien ici ca sinon erreur " End tag a violates nesting rules." au validator W3C-->
+                        <a href="/src/la_palette_du_gout.html" class="restaurants__main__article__link">
+                        <div class="restaurants__main__article__link__container__subtitles">
+                   
+                            <h3 class="restaurants__main__article__link__container__subtitles__title"> La palette du goût
+                            </h3>
+                             <h4 class="restaurants__main__article__link__container__subtitles__place">Ménilmontant
+
+                             </h4>
+                        </div>
+                        </a>
+               
+                    <button class="restaurants__main__article__link__container__like"><i class="fa-regular fa-heart"></i></button>  
+                    </div>
+
+                <span class="restaurants__main__article__flag">Nouveau</span>                
+            </article>
+
+            <article class="restaurants__main__article">
+                <a href="/src/la_note_enchantee.html" class="restaurants__main__article__link">
+                    <img src="/src/assets/images/restaurants/la_note_enchantee.jpg" alt="La note enchantée" class="restaurants__main__article__link__img">
+                </a>
+                    <div class="restaurants__main__article__link__container">
+                        <!--Obligé de remettre lien ici ca sinon erreur " End tag a violates nesting rules." au validator W3C-->
+                        <a href="/src/la_note_enchantee.html" class="restaurants__main__article__link">
+                        <div class="restaurants__main__article__link__container__subtitles">
+                   
+                            <h3 class="restaurants__main__article__link__container__subtitles__title"> La note enchantée
+                            </h3>
+                             <h4 class="restaurants__main__article__link__container__subtitles__place">Charonne
+
+                             </h4>
+                        </div>
+                        </a>
+               
+                    <button class="restaurants__main__article__link__container__like"><i class="fa-regular fa-heart"></i></button>  
+                    </div>
+
+                <span class="restaurants__main__article__flag">Nouveau</span>                
+            </article>
+
+            <article class="restaurants__main__article">
+                <a href="/" class="restaurants__main__article__link">
+                    <img src="/src/assets/images/restaurants/a_la_francaise.jpg" alt="A la française" class="restaurants__main__article__link__img">
+                </a>
+                    <div class="restaurants__main__article__link__container">
+                        <!--Obligé de remettre lien ici ca sinon erreur " End tag a violates nesting rules." au validator W3C-->
+                        <a href="/src/a_la_francaise.html" class="restaurants__main__article__link">
+                        <div class="restaurants__main__article__link__container__subtitles">
+                   
+                            <h3 class="restaurants__main__article__link__container__subtitles__title"> À la française
+                            </h3>
+                             <h4 class="restaurants__main__article__link__container__subtitles__place">Cité Rouge
+
+                             </h4>
+                        </div>
+                        </a>
+               
+                    <button class="restaurants__main__article__link__container__like"><i class="fa-regular fa-heart"></i></button>  
+                    </div>
+
+                <!-- <span class="restaurants__main__article__flag">Nouveau</span>                 -->
+            </article>
+
+            <article class="restaurants__main__article">
+                <a href="/src/le_delice_des_sens.html" class="restaurants__main__article__link">
+                    <img src="/src/assets/images/restaurants/le_delices_des_sens.jpg" alt="Le délice des sens" class="restaurants__main__article__link__img">
+                </a>
+                    <div class="restaurants__main__article__link__container">
+                        <!--Obligé de remettre lien ici ca sinon erreur " End tag a violates nesting rules." au validator W3C-->
+                        <a href="/src/le_delice_des_sens.html" class="restaurants__main__article__link">
+                        <div class="restaurants__main__article__link__container__subtitles">
+                   
+                            <h3 class="restaurants__main__article__link__container__subtitles__title"> Le délice des sens
+                            </h3>
+                             <h4 class="restaurants__main__article__link__container__subtitles__place">Folie-Méricourt
+
+                             </h4>
+                        </div>
+                        </a>
+               
+                    <button class="restaurants__main__article__link__container__like"><i class="fa-regular fa-heart"></i></button>  
+                    </div>
+
+                <!-- <span class="restaurants__main__article__flag">Nouveau</span>                 -->
+            </article>
+
+
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 class="footer__title">
+            ohmyfood
+        </h2>
+        <ul class="footer__list">
+            <li class="footer__list__items"> 
+                <a href="#" class="footer__list__items__link">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Proposer un restaurant</p>
+                </a>
+            </li>
+            <li class="footer__list__items">
+                <a href="#" class="footer__list__items__link">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <p>Devenir partenaire</p>
+                </a>
+            </li>
+            <li class="footer__list__items">
+                <a href="#" class="footer__list__items__link">Mentions légales</a>
+            </li>
+            <li class="footer__list__items">
+                <a href="mailto:contact@ohmyfood.com" class="footer__list__items__link">Contact</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
