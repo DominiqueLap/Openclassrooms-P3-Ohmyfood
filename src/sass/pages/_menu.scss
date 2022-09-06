@@ -1,286 +1,244 @@
-
-
 // MENUS RESTAURANTS //
 
+.header-menu {
+  @include flexRow;
+  margin: 20px 0;
 
-.header-menu{
-    @include flexRow;
-    margin: 20px 0;
-
-    &__nav{
-        &__link{
-            i{
-                position: absolute;
-                left: 35px;
-            top: 25px;
-            }
-        }
-    }
-
-    &__logo{
-        padding-left: 25px;
-    }
-  
- }
-
- .menu{
-    background: $bg-color;
-
-    &__img{
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        position: relative;
-        z-index: 0;
-   
-    }
-
-  
-
-    &__main{
-
-        border-radius: 30px;
-        position: relative;
-        z-index: 1;
-        top: -55px;
-        background: $bg-color;
-
-
-
-        &__heading{
-            width: 100%;
-            padding: $pad-section;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-       
-           
-   
-           
-    
-            @media screen and (min-width:1024px){
-                justify-content:space-evenly;
-            }
-    
-            &__button{
-                padding: 0;
-                position: relative;
-               
-            
-                @media screen and (min-width:1024px){
-                    &:hover::after{
-                        @include afterButtonEffect(center)
-                        
-                    }
-                }
-
-                &:active::after{
-                    @include afterButtonEffect(center);
-                
-                    
-                }
-
-                &::after{
-                    @include afterButton;
-                    left: 0;
-                    right: 0;
-                    top: -1px;
-                    bottom: 0;
-                  
-                }
-            }
-        }
-
-
-        &__entrees{
-  
-            padding: $pad-section;
-            display: flex;
-            flex-direction: column;
-            gap: 20px; 
-            position: relative; 
-
-            @media screen and (min-width:768px) {
-            align-items: center;
-            }
-
-            &__title{
-                margin-bottom: 0;
-                margin-top: 0;
-                text-transform: uppercase;
-                
-              &::before{
-                content: "";
-                position: absolute;
-                width: 37px;
-                top: 35px;
-            
-                border-bottom: 2px solid $color-tertiary;
-                             
-              }
-              
-               
-                
-            }
-
-
-            &__article{
-                background: #FFF;
-                border-radius: 15px;
-                // padding: 15px;
-                height: 70px;
-                @include boxShadow (darken($bg-color,15%));
-                position: relative;
-                overflow: hidden;
-                
-
-                @media screen and (min-width:768px) {
-                    width:75%;
-                }
-             
-                
-                &:hover{
-                   
-
-                    @include boxShadow (darken($bg-color,25%));
-
-                
-                }
-
-               
-                &:active::after{
-                    width: 20%;
-                    z-index: 1;
-                    transform-origin: right;
-                    transform: scaleX(1);
-                   
-                 
-                }
-
-                // &::after{
-
-                //     content: "\f058";
-                //     font-family: "Font Awesome 6 Free";
-                //     font-weight: 900;
-                //     color: #FFF;
-                //     font-size: 25px;
-                //     position: absolute;
-                //     top: 0  ;
-                //     right: 0;
-                //     background: $color-tertiary;
-                //     height: 100%;
-                //     border-bottom-right-radius: 15px;
-                //     border-top-right-radius: 15px;
-                //     transform: scaleX(0);
-                //     transition: transform 500ms ease-in-out;
-                //     animation-fill-mode: forwards;
-                //     @include flexRow;
-                    
-               
-                    
-
-                 
-                //}
-          
-               
-
-                a{
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    height: 100%;
-    
-                   
-                }
-
-                // strong{
-                //     margin-top: auto;
-                // }
-
-
-                &__titles{
-                     padding: 15px;
-                     white-space: nowrap;
-                    @extend %ellipsis;
-
-                    h3{
-                        margin: 0;
-                        @extend %ellipsis;
-                    }
-
-                    h4{
-                        margin:0;
-                        margin-top: 5px;
-                       @extend %ellipsis;
-                    }
-
-                }
-
-                &__checkbox{
-                    margin-right: -70px;
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
-                    transition: margin-right 1s;
-
-                    strong{
-                        padding: 15px 25px;
-                        margin-top: auto;
-                      
-                    }
-
-                    &__icon{
-                        width: 70px;
-                        height: 100%;
-                        background: $color-tertiary;
-                        border-radius: 0 15px 15px 0;
-                   
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-       
-
-                        .fa-circle-check{
-                            font-size: 25px;
-                            color: #FFF;
-                            // transition: transform 1s;
-                        }
-
-
-                    }
-                }
-            }
-
-        }
-    }
- }
-
-
-// A FACTORISER
-
- .menu__main__entrees__article:active .menu__main__entrees__article__checkbox{
- margin-right: 0;
-   
- }
-
-@media screen and (min-width:1024px) {
-
-    .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox{
-        margin-right: 0;
-          
-        }
-    
+  &__logo {
+    padding-left: 25px;
+  }
 }
 
- .menu__main__entrees__article:active .menu__main__entrees__article__checkbox__icon .fa-circle-check {
-    transform: rotate(360deg);
-    transition-duration: 1s;
+.menu {
+  background: $bg-color;
 
- }
+  &__imgContainer{
+    @include large-screen{
+    height: 50vh}
+  }
 
- @media screen and (min-width:1024px) {
-    .menu__main__entrees__article:hover .menu__main__entrees__article__checkbox__icon .fa-circle-check {
-        transform: rotate(360deg);
-        transition-duration: 1s;}
+  &__img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
 
- }
+    @include large-screen {
+      height: 100%;
+    }
+  }
+
+  &__main {
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    top: -55px;
+    background: $bg-color;
+
+    &__heading {
+      width: 100%;
+      padding: $pad-section;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (min-width: 1024px) {
+        justify-content: space-evenly;
+      }
+
+      &__button {
+        padding: 0;
+        position: relative;
+
+        @include desktop {
+          &:hover::after {
+            @include afterButtonEffect(center);
+          }
+        }
+
+        &:active::after {
+          @include afterButtonEffect(center);
+        }
+
+        &::after {
+          @include afterButton;
+          left: 0;
+          right: 0;
+          top: -1px;
+          bottom: 0;
+        }
+      }
+    }
+
+    &__category {
+      padding: $pad-section;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+
+      @include tablet {
+        align-items: center;
+      }
+
+      &__title {
+        margin-bottom: 0;
+        margin-top: 0;
+        text-transform: uppercase;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 50px;
+          top: 35px;
+          border-bottom: 2px solid $color-tertiary;
+        }
+      }
+
+      &__article {
+        background: #fff;
+        border-radius: 15px;
+        // padding: 15px;
+        height: 70px;
+        @include boxShadow(darken($bg-color, 15%));
+        position: relative;
+        overflow: hidden;
+
+        @include tablet {
+          width: 75%;
+        }
+
+        &:hover {
+          @include boxShadow(darken($bg-color, 25%));
+        }
+
+        &:hover &__checkbox {
+          @include desktop {
+            margin-right: 0;
+
+            &__icon {
+              & .fa-circle-check {
+                transform: rotate(360deg);
+                transition-duration: 1s;
+              }
+            }
+          }
+        }
+
+        &:active &__checkbox {
+          margin-right: 0;
+
+          &__icon {
+            & .fa-circle-check {
+              transform: rotate(360deg);
+              transition-duration: 1s;
+            }
+          }
+        }
+
+        &:active::after {
+          width: 20%;
+          z-index: 1;
+          transform-origin: right;
+          transform: scaleX(1);
+        }
+
+        // &::after{
+
+        //     content: "\f058";
+        //     font-family: "Font Awesome 6 Free";
+        //     font-weight: 900;
+        //     color: #FFF;
+        //     font-size: 25px;
+        //     position: absolute;
+        //     top: 0  ;
+        //     right: 0;
+        //     background: $color-tertiary;
+        //     height: 100%;
+        //     border-bottom-right-radius: 15px;
+        //     border-top-right-radius: 15px;
+        //     transform: scaleX(0);
+        //     transition: transform 500ms ease-in-out;
+        //     animation-fill-mode: forwards;
+        //     @include flexRow;
+
+        //}
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        // strong{
+        //     margin-top: auto;
+        // }
+
+        &__titles {
+          padding: 15px;
+          white-space: nowrap;
+          @extend %ellipsis;
+
+          h3 {
+            margin: 0;
+            @extend %ellipsis;
+          }
+
+          h4 {
+            margin: 0;
+            margin-top: 5px;
+            @extend %ellipsis;
+          }
+        }
+
+        &__checkbox {
+          margin-right: -70px;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          transition: margin-right 1s;
+
+          strong {
+            padding: 15px 25px;
+            margin-top: auto;
+          }
+
+          &__icon {
+            width: 70px;
+            height: 100%;
+            background: $color-tertiary;
+            border-radius: 0 15px 15px 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .fa-circle-check {
+              font-size: 25px;
+              color: #fff;
+              // transition: transform 1s;
+            }
+          }
+        }
+      }
+
+      @include large-screen {
+        gap: 30px;
+        width: 30%;
+        &__article {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.menu-container {
+  @include large-screen {
+    @include flexRow;
+
+    gap: 60px;
+  }
+}

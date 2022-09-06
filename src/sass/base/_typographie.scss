@@ -1,113 +1,93 @@
-body{
-    font-family: 'Roboto', sans-serif;}
-
-h1,h2
-{font-size: 23px;
-    font-weight: bolder
-};
-
-
-.localisation__place{
-    & address{
-
-    
-        font-style: normal}
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-
-.fonctionnement{
-    &__list{
-        &__items{
-
-            &__links{
-
-                &__title{
-                    font-size: 14px;
-                    font-weight: lighter;
-                }
-            }
-        }
-    }
+h1,
+h2 {
+  font-size: 23px;
+  font-weight: bolder;
 }
 
-.restaurants{
+.localisation__place {
+  & address {
+    font-style: normal;
+  }
+}
 
-    &__main{
-
-        &__article{
-    
-            &__link{
-
-                &__container{
-
-                    &__subtitles{
-
-                    &__title{
-                    font-size: 16px;
-                    font-weight: bold;
-                }
-                    &__place{
-                        font-weight: lighter;
-                    }
-                }
-            }
+.fonctionnement {
+  &__list {
+    &__items {
+      &__links {
+        &__title {
+          font-size: 14px;
+          font-weight: lighter;
         }
-
-
-            }
-        }
+      }
     }
+  }
+}
 
-
-
+.restaurants {
+  &__main {
+    &__article {
+      &__link {
+        &__container {
+          &__subtitles {
+            &__title {
+              font-size: 16px;
+              font-weight: bold;
+            }
+            &__place {
+              font-weight: lighter;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // MENUS RESTAURANTS //
 
-.header-menu{
-    &__nav{
-        &__link{
-            i{
-                font-size: 25px;
-            }
-        }
+.header-menu {
+  &__nav {
+    &__link {
+      i {
+        font-size: 25px;
+      }
     }
+  }
 }
 
-
-
-.menu{
-
-   
-
-    &__main{
-        &__heading{
-            &__title{
-                font-family: 'Shrikhand', sans-serif;
-                font-size: 30px;
-            }
-            i{
-                font-size: 25px;
-            }
-        }
-
-        &__entrees{
-            &__title{
-                font-size: 20px;
-                font-weight: lighter;
-            }
-            &__article{
-                &__titles{
-                    h3{
-                        font-size: 15px;
-                    }
-
-                    h4{
-                        font-weight: 100;
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
+.menu {
+  &__main {
+    &__heading {
+      &__title {
+        @include titles-fonts;
+        // font-size: 30px;
+      }
+      i {
+        font-size: 25px;
+      }
     }
-}
 
+    &__category {
+      &__title {
+        font-size: 20px;
+        font-weight: lighter;
+      }
+      &__article {
+        &__titles {
+          h3 {
+            font-size: 15px;
+          }
+
+          h4 {
+            font-weight: 100;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

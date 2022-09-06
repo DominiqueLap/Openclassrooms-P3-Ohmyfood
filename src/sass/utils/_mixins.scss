@@ -1,56 +1,84 @@
-@mixin titles-fonts{
-    font-family: "Shrikhand", sans-serif;
+@mixin titles-fonts {
+  font-family: "Shrikhand", sans-serif;
 }
 
-@mixin button-bradius{
-    border-radius: 15px;
-    padding: 10px;
-    background: $color-secondary;
-    color: white;  
+@mixin button-bradius {
+  border-radius: 15px;
+  padding: 10px;
+  background: $color-secondary;
+  color: white;
 }
 
-@mixin flexRow{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flexColumn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin boxShadow ($colour:$bg-color){
-    box-shadow: 5px 5px 5px $colour
-    
+@mixin boxShadow($colour: $bg-color) {
+  box-shadow: 5px 5px 5px $colour;
 }
 
-@mixin afterButton{
+//mixin pour le pseudo element du coeur pour l'animation
 
-    content: "\f004";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 600;
-    font-size: 25px;
-    position: absolute;
-   
-    opacity: 0;
-    transform: scale(0);
+@mixin afterButton {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 25px;
+  position: absolute;
 
-
+  opacity: 0;
+  transform: scale(0);
 }
 
-@mixin afterButtonEffect($trans-origin:$t-origin){
-    opacity: 1;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient($color-primary,$color-secondary);
-    transform-origin: $trans-origin;
-    transform: scaleY(1);
-    transition: transform 1s ease-in-out;
+//mixin pour l'animation du pseudo element du coeur
+
+@mixin afterButtonEffect($trans-origin: $t-origin) {
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient($color-primary, $color-secondary);
+  transform-origin: $trans-origin;
+  transform: scaleY(1);
+  transition: transform 1s ease-in-out;
 }
 
+//mixin breakpoints
+
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoints,tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints,desktop)) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media screen and (min-width: map-get($breakpoints,large-screen)) {
+    @content;
+  }
+}
+
+//breakpoint pour enlever l'espace blanc entre le bouton et le footer sur les tres grands écrans
+
+@mixin xlarge-screen {
+
+  @media screen and (min-width: map-get($breakpoints,xlarge-screen)) {
+    @content
+  }
+  
+}

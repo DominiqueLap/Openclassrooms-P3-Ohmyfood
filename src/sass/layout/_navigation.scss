@@ -1,11 +1,13 @@
-.header-menu{
-    
-        &__nav{
-            font-size: 25px;
-    
-            &__link{
-                color: black;
-               
-            }
-        }
+.header-menu {
+  &__nav {
+    font-size: 25px;
+
+    &__link {
+      i {
+        position: absolute;
+        left: 35px;
+        top: 25px;
+      }
     }
+  }
+}

@@ -1,45 +1,42 @@
+// APPARITION DES PLATS
+
 $anim-duration: 2s;
 $sections: 3;
 $animation-delay: calc($anim-duration / $sections);
 
-.menu{
-    &__main{
-        &__entrees{
+.menu {
+  &__main {
+    &__category {
+      opacity: 0;
+      animation: appear 2s;
+      animation-fill-mode: both;
 
-            opacity: 0;
-            animation: appear 2s ;
-            animation-fill-mode: both;
-     
-
-
-            @for $i from 1 through $sections {
-                &--#{$i}{
-                    animation-delay: $animation-delay * $i;
-                }
-            }
+      @for $i from 1 through $sections {
+        &--#{$i} {
+          animation-delay: $animation-delay * $i;
         }
-}
+      }
+    }
+  }
 }
 
 @keyframes appear {
-    
-    0%{
-        opacity: 0;
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0, 4;
+  }
 
-    }
-    25%{
-        opacity: 0,4;
-    }
+  50% {
+    opacity: 0.6;
+  }
 
-    50%{
-        opacity: 0.6;
-    }
+  75% {
+    opacity: 0.8;
+  }
 
-    75%{
-        opacity: 0.8;
-    }
-
-    100%{
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,11 +1,10 @@
-.header{
-    text-align: center;
-    box-shadow: 0px 5px 5px lighten(grey,35%);
-    margin-top: 20px;
-    position: relative;
+.header {
+  text-align: center;
+  box-shadow: 0px 5px 5px lighten(grey, 35%);
+  margin-top: 20px;
+  position: relative;
 
-
-    &__logo{
-        padding-bottom: 10px;
-    }
+  &__logo {
+    padding-bottom: 10px;
+  }
 }

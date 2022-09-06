@@ -1,70 +1,64 @@
-a{
-    text-decoration: none;
-
+a {
+  text-decoration: none;
 }
 
-a{
-    color: black;
+a {
+  color: black;
 }
 
-.localisation__link{
+.localisation__link {
+  padding: 15px;
+  border-radius: 30px;
+  background: linear-gradient($color-secondary, $color-primary);
+  color: $btn-color;
 
-    padding: 15px;
-    border-radius: 30px;
-    background: linear-gradient($color-secondary,$color-primary,);
-    color: $btn-color;
- 
-    margin:15px 0 60px 0;
-    @include boxShadow(lighten(grey,35%));
-    
-    
+  margin: 15px 0 60px 0;
+  @include boxShadow(lighten(grey, 35%));
 
-    &:hover{
-        @include boxShadow(darken(grey,25%));
-     background: linear-gradient( lighten($color-secondary, 5), lighten($color-primary, 5))
+  &:hover {
+    @include boxShadow(darken(grey, 25%));
+    background: linear-gradient(
+      lighten($color-secondary, 5),
+      lighten($color-primary, 5)
+    );
+  }
+}
+
+.menu {
+  &__main {
+    &__heading {
+      &__button {
+        border: none;
+        background: none;
+        transition: background 1s;
+      }
+    }
+    &__button {
+      text-align: center;
+      &__btn {
+        padding: 15px 45px;
+        border-radius: 30px;
+        background: linear-gradient($color-secondary, $color-primary);
+        color: $btn-color;
+        margin-top: 30px;
+    @include xlarge-screen{
+        margin-bottom: 50px
       
-    }
-}
+     }
+      
+        @include boxShadow(lighten(grey, 35%));
+        border: none;
+        cursor: pointer;
+        transition: all 0.5s;
 
-.menu{
-
-    
-    &__main{
-
-        &__heading{
-            &__button{
-                border: none;
-                background: none;
-                transition: background 1s;
-                
-          
-            }
-    
+        &:hover {
+          @include boxShadow(darken(grey, 25%));
+          background: linear-gradient(
+            lighten($color-secondary, 5),
+            lighten($color-primary, 5)
+          );
         }
-    &__button
-        {text-align: center;
-            &__btn{
-            padding: 15px 45px;
-    border-radius: 30px;
-    background: linear-gradient($color-secondary,$color-primary,);
-    color: $btn-color;
- 
-  margin-top: 30px;
-  margin-bottom: 60px;
-    @include boxShadow(lighten(grey,35%));
- 
-    border: none;
-    cursor: pointer;
-    transition: all 0.5s;
-   
-    &:hover{
-        @include boxShadow(darken(grey,25%));
-        background: linear-gradient( lighten($color-secondary, 5), lighten($color-primary, 5));
-       
+      }
     }
-        }
-
-       
-    }
-}
+  }
 }
