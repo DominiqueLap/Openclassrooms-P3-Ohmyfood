@@ -4,7 +4,8 @@
   "description": "ohmyfood_P3_developpeur_web_openclassrooms_08_2022",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/sass/main.scss:src/css/main.css"
+    "sass": "sass --watch src/sass/main.scss:src/css/main.css --style compressed",
+    "prefix": "postcss src/css/main.css --use autoprefixer -o src/css/prefixed.css  "
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,10 @@
   "homepage": "https://github.com/DominiqueLap/Openclassrooms-P3-Ohmyfood#readme",
   "dependencies": {
     "sass": "^1.54.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
   }
 }

@@ -76,9 +76,7 @@
 //breakpoint pour enlever l'espace blanc entre le bouton et le footer sur les tres grands écrans
 
 @mixin xlarge-screen {
-
   @media screen and (min-width: map-get($breakpoints,xlarge-screen)) {
-    @content
+    @content;
   }
-  
 }

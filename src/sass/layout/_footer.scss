@@ -1,4 +1,13 @@
+// permet d'avoir le footer collé en bas de page peu importe la taille de l'écran
+html,
+body {
+  height: 100%;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+}
 
 .footer {
   color: #fff;
@@ -11,7 +20,10 @@
     align-items: center;
   }
 
-
+  // permet d'avoir le footer collé en bas de page peu importe la taille de l'écran https://css-tricks.com/couple-takes-sticky-footer/#aa-there-is-flexbox
+  @include xlarge-screen {
+    flex-shrink: 0;
+  }
 
   &__title {
     @include titles-fonts;
